@@ -1,0 +1,2 @@
+1. cp MyDirectory/*.txt MyDirectory_2 
+2. ls -l MyDirectory_2 

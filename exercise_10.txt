@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo apt update
+package=$(apt list --upgradable 2>/dev/null | grep -c upgradable)
+echo ""
+if [ "$package" -gt 0 ]; then
+    echo "Updates available"
+  #  sudo apt upgrade -y
+else
+    echo "No updates"
+fi

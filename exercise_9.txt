@@ -1,0 +1,13 @@
+#!/bin/bash
+list_file=$(ls -A)
+count=0
+for i in $list_file;
+do
+count=$((count+1))
+done
+if  [ $count -gt 0 ];
+then
+echo "Number of files and folders in the current folder: $count"
+else
+echo "Current folder is empty"
+fi

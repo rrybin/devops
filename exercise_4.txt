@@ -1,0 +1,4 @@
+1. zip -r devops.zip MyDirectory MyFile_4.txt MyFile_5.txt
+2. unzip devops.zip -d unzip_file
+3. cksum MyFile_5.txt
+4. cksum unzip_file/MyFile_5.txt

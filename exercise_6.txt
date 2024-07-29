@@ -1,0 +1,11 @@
+#!/bin/bash
+dir_back="MyDirectory  MyDirectory_2"
+dir_dest="."
+stamp=$(date +%F)
+back_file="backup-$stamp.zip"
+zip -r  "$back_file" $dir_back
+if [ $? -eq 0 ]; then
+    echo "Backup create: $back_file"
+else
+    echo "Backup failed!"
+fi

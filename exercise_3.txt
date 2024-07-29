@@ -1,0 +1,22 @@
+#!/bin/bash
+echo 'Search word in filename!!!'
+read -p "Enter search word: " word
+found_file=$(find . -name "*$word*")
+if [ -z "${found_file}" ] ;
+then
+echo 'File not found'
+else
+echo 'Search result in filename: '
+echo "$found_file"
+fi
+echo ''
+echo 'Search word in the file contents!!!'
+read -p "Enter search word: " word
+found_file=$(grep -rn . -e "$word")
+if [ -z "${found_file}" ] ;
+then
+echo 'Word not found'
+else
+echo 'Search result in the file contents:'
+echo "$found_file"
+fi

@@ -1,0 +1,4 @@
+1. mkdir MyDirectory
+2. cd MyDirectory 
+3. touch MyFile.txt     
+4. ls

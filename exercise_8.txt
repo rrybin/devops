@@ -1,0 +1,15 @@
+#!/bin/bash
+read -p "Enter the password length: " length
+if [ -z "${length}" ] ;
+then
+echo 'Password length is not specified'
+exit 0
+fi
+read -p "Enter the number of passwords: " numbers
+if [ -z "${numbers}" ] ;
+then
+echo 'Number of passwords not specified. Generate 10 passwords.'
+numbers=10
+fi
+touch pwd_list.txt
+pwgen -1 "$length" "$numbers" > pwd_list.txt
